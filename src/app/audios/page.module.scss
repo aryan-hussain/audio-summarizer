@@ -1,0 +1,23 @@
+.checkContainer {
+  .check {
+    > span {
+      background-color: rgb(11, 107, 203) !important;
+      svg {
+        path {
+          fill: white !important;
+        }
+      }
+    }
+  }
+
+  .uncheck {
+    > span {
+      background-color: rgba(196, 28, 28, 0.266) !important;
+      svg {
+        path {
+          fill: white !important;
+        }
+      }
+    }
+  }
+}

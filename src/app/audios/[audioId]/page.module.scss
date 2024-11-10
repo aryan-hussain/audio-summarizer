@@ -1,0 +1,110 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+}
+
+.agentSentiments {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+}
+
+.customerSetiments {
+  grid-column: 5 / 9;
+  grid-row: 1 / 2;
+}
+
+.conversationCharacteristics {
+  grid-column: 9 / 13;
+  grid-row: 1 / 3;
+}
+
+.PIIredaction {
+  grid-column: 1 / 5;
+  grid-row: 2 / 3;
+}
+
+.whoTalksMore {
+  grid-column: 5 / 9;
+  grid-row: 2 / 3;
+
+  div[role="region"] {
+    width: 100% !important;
+    > svg {
+      width: 100% !important;
+    }
+  }
+}
+
+.analyticLoudeness {
+  grid-column: 1 / 13;
+  grid-row: 3 / 4;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1310px) {
+  .gridContainer {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .agentSentiments {
+    grid-column: 1 / 5;
+  }
+
+  .customerSetiments {
+    grid-column: 5 / 9;
+  }
+
+  .conversationCharacteristics {
+    grid-column: 1 / 9;
+    grid-row: 2 / 3;
+  }
+
+  .PIIredaction {
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+  }
+
+  .whoTalksMore {
+    grid-column: 5 / 9;
+    grid-row: 3 / 4;
+  }
+
+  .analyticLoudeness {
+    grid-column: 1 / 9;
+    grid-row: 4 / 5;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .agentSentiments,
+  .customerSetiments,
+  .PIIredaction,
+  .whoTalksMore,
+  .conversationCharacteristics,
+  .analyticLoudeness {
+    grid-column: 1 / 5;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .agentSentiments,
+  .customerSetiments,
+  .PIIredaction,
+  .whoTalksMore,
+  .conversationCharacteristics,
+  .analyticLoudeness {
+    grid-column: 1 / 3;
+    grid-row: auto;
+  }
+}
